@@ -41,7 +41,6 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         let takePictureAction: UIAlertAction = UIAlertAction(title: "拍照", style: .Default)
             { action -> Void in
             
-             
             [self .initWithImagePickView("拍照")];
                 
         }
@@ -125,13 +124,11 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate,UINaviga
         case "相册":
             self.imagePicker.sourceType = .PhotoLibrary
             break
-        case "录像":
+        case "摄像":
             self.imagePicker.sourceType = .Camera
             self.imagePicker.videoMaximumDuration = 60 * 3
             self.imagePicker.videoQuality = .Type640x480
             self.imagePicker.mediaTypes = [String(kUTTypeMovie)]
-            
-    
             break
         default:
             print("error")
